@@ -579,7 +579,7 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
 .footer__word {
   display: block;
   font-family: var(--serif); font-weight: 400;
-  font-size: 27vw; line-height: 0.85; letter-spacing: -0.06em;
+  font-size: 16vw; line-height: 0.9; letter-spacing: -0.06em;
   text-align: center;
   color: transparent;
   -webkit-text-stroke: 1px rgba(243, 237, 226, 0.35);

@@ -4,7 +4,7 @@
 // ============================================================
 
 export const profile = {
-  name: 'Mahu',
+  name: 'Maheswari',
   role: 'Content Writer & Copywriter',
   // the hero types these words one by one: "I write words that ___"
   rotatingWords: ['sell', 'rank', 'stick', 'inspire'],
@@ -27,7 +27,7 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "Hi, I'm Mahu — a content writer who believes every brand has a story worth telling. I turn ideas, research and rough notes into content people genuinely enjoy reading.",
+    "Hi, I'm Maheswari — a content writer who believes every brand has a story worth telling. I turn ideas, research and rough notes into content people genuinely enjoy reading.",
     'From long-form blogs and SEO articles to punchy website copy and social captions, I adapt my voice to fit your brand while keeping your goals at the centre of every single piece.',
   ],
   quote: 'Good content doesn’t just inform. It makes people feel something — and then act on it.',
@@ -128,7 +128,7 @@ export const testimonials = [
   {
     name: 'Priya Sharma',
     role: 'Founder, Bloom Cafe',
-    text: 'Mahu captured our cafe’s personality perfectly. Customers keep telling us how much they love reading our website.',
+    text: 'Maheswari captured our cafe’s personality perfectly. Customers keep telling us how much they love reading our website.',
   },
   {
     name: 'Rahul Verma',
