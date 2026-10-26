@@ -288,7 +288,7 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
 }
 .polaroid__img img { width: 100%; height: 100%; object-fit: cover; }
 .polaroid__img span { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 8rem; color: #fff8ef; }
-.polaroid figcaption { font-family: var(--hand); font-size: 1.6rem; text-align: center; padding: 10px 0 14px; }
+.polaroid figcaption { font-family: var(--hand); font-size: 1.45rem; white-space: nowrap; text-align: center; padding: 10px 0 14px; }
 .tape {
   position: absolute; top: -14px; left: 50%;
   width: 110px; height: 30px;
@@ -644,6 +644,7 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
   .badge > span { width: 52px; height: 52px; font-size: 1.2rem; }
   .polaroid { width: 190px; }
   .polaroid__img span { font-size: 6rem; }
+  .polaroid figcaption { font-size: 1.1rem; }
   .stats { grid-template-columns: 1fr 1fr 1fr; }
   .stat + .stat { padding-left: 12px; }
   .stat > span { font-size: 0.66rem; }

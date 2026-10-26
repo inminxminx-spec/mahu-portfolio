@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { profile } from '../data.js'
 import { Reveal } from './ui.jsx'
+import { blogEnabled } from '../wordpress.js'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -19,7 +20,7 @@ export default function Contact() {
     <section id="contact" className="contact">
       <div className="container">
         <Reveal className="shead__meta">
-          <span>06</span>
+          <span>{blogEnabled ? '07' : '06'}</span>
           <span className="shead__rule" />
           <span>Contact</span>
         </Reveal>

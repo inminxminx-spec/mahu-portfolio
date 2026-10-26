@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom'
 import { profile } from '../data.js'
 
 export default function Footer() {
+  const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+
   return (
     <footer className="footer">
       <div className="container">
-        <a href="#home" className="footer__word" aria-label="Back to top">
+        <Link to="/" className="footer__word" aria-label="Home">
           {profile.name}
           <span>.</span>
-        </a>
+        </Link>
         <div className="footer__bottom">
           <p>
             © {new Date().getFullYear()} {profile.name}. Written with care.
@@ -19,9 +22,9 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <a href="#home" className="footer__top">
+          <button onClick={toTop} className="footer__top">
             Back to top ↑
-          </a>
+          </button>
         </div>
       </div>
     </footer>

@@ -141,3 +141,16 @@ export const testimonials = [
     text: 'Clean drafts, fresh ideas and a reader-first approach. Honestly one of the easiest writers I’ve worked with.',
   },
 ]
+
+// ------------------------------------------------------------
+//  BLOG (powered by WordPress)
+//  Put the WordPress site address here, e.g.
+//    'maheswari.wordpress.com'   (free WordPress.com site)
+//    'cms.minnxx.com'            (self-hosted WordPress, e.g. on Hostinger)
+//  Leave it empty to hide the blog from the website.
+// ------------------------------------------------------------
+export const blog = {
+  wordpressSite: '',
+  title: 'The Journal',
+  intro: 'Notes on writing, content and storytelling — straight from my desk.',
+}

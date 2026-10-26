@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { profile } from '../data.js'
+import { blogEnabled } from '../wordpress.js'
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#work', label: 'Work' },
-  { href: '#testimonials', label: 'Reviews' },
-  { href: '#contact', label: 'Contact' },
+  { to: '/#about', label: 'About' },
+  { to: '/#services', label: 'Services' },
+  { to: '/#work', label: 'Work' },
+  ...(blogEnabled ? [{ to: '/blog', label: 'Blog' }] : []),
+  { to: '/#testimonials', label: 'Reviews' },
+  { to: '/#contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -14,6 +17,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
   const lastY = useRef(0)
+  const { pathname } = useLocation()
 
   // background after scrolling a bit; hide when scrolling down, show when scrolling up
   useEffect(() => {
@@ -32,6 +36,7 @@ export default function Navbar() {
   }, [open])
 
   const close = () => setOpen(false)
+  const isActive = (to) => to === '/blog' && pathname.startsWith('/blog')
 
   return (
     <>
@@ -39,24 +44,24 @@ export default function Navbar() {
         className={`nav ${scrolled ? 'nav--scrolled' : ''} ${hidden && !open ? 'nav--hidden' : ''} ${open ? 'nav--open' : ''}`}
       >
         <div className="container nav__inner">
-          <a href="#home" className="nav__logo" onClick={close}>
+          <Link to="/" className="nav__logo" onClick={close}>
             {profile.name}
             <span>.</span>
-          </a>
+          </Link>
 
           <nav className="nav__links">
             {links.map((l, i) => (
-              <a key={l.href} href={l.href}>
+              <Link key={l.to} to={l.to} className={isActive(l.to) ? 'is-active' : ''}>
                 <sup>0{i + 1}</sup>
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
-          <a href="#contact" className="nav__status">
+          <Link to="/#contact" className="nav__status">
             <span className="dot" />
             {profile.availability}
-          </a>
+          </Link>
 
           <button className="nav__toggle" onClick={() => setOpen(!open)} aria-expanded={open}>
             {open ? 'Close' : 'Menu'}
@@ -67,10 +72,10 @@ export default function Navbar() {
       <div className={`menu ${open ? 'menu--open' : ''}`} aria-hidden={!open}>
         <nav className="container menu__links">
           {links.map((l, i) => (
-            <a key={l.href} href={l.href} onClick={close} style={{ '--i': i }}>
+            <Link key={l.to} to={l.to} onClick={close} style={{ '--i': i }}>
               <sup>0{i + 1}</sup>
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="container menu__foot">

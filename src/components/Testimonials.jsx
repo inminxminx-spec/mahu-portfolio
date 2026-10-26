@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { testimonials } from '../data.js'
 import { Reveal, SectionHead } from './ui.jsx'
+import { blogEnabled } from '../wordpress.js'
 
 const DURATION = 7000
 
@@ -18,7 +19,7 @@ export default function Testimonials() {
     <section id="testimonials" className="section process">
       <div className="container">
         <SectionHead
-          num="05"
+          num={blogEnabled ? '06' : '05'}
           label="Kind Words"
           title={
             <>
