@@ -150,7 +150,7 @@ export const testimonials = [
 //  Leave it empty to hide the blog from the website.
 // ------------------------------------------------------------
 export const blog = {
-  wordpressSite: '',
+  wordpressSite: 'maheswariwrites.wordpress.com',
   title: 'The Journal',
   intro: 'Notes on writing, content and storytelling — straight from my desk.',
 }
