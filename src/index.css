@@ -195,25 +195,34 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
 .masthead span:last-child { text-align: right; }
 .hero__title {
   margin-top: 6vh;
-  font-size: clamp(3.2rem, 11.2vw, 11rem);
-  line-height: 0.92;
-  letter-spacing: -0.045em;
+  font-size: clamp(3rem, 7.6vw, 7.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
   font-variation-settings: 'opsz' 144;
 }
 .hero__line { display: block; overflow: hidden; padding-bottom: 0.1em; margin-bottom: -0.1em; }
 .hero__line > span { display: inline-block; white-space: nowrap; animation: rise 1.2s var(--ease) both; }
-.hero__line--indent { padding-left: 12vw; }
-.hero__line--indent > span { animation-delay: 0.15s; }
+.hero__line:nth-child(2) > span { animation-delay: 0.12s; }
+.hero__line:nth-child(3) > span { animation-delay: 0.24s; }
 .hero__title em { color: var(--red); font-weight: 300; }
 .hero__note {
   display: inline-block;
-  margin-left: 0.25em;
+  margin-left: 0.6em;
   vertical-align: top;
   font-family: var(--hand);
-  font-size: 0.17em;
+  font-size: 0.28em;
   letter-spacing: 0;
   color: var(--ink-2);
-  transform: rotate(-6deg) translateY(0.8em);
+  transform: rotate(-6deg) translateY(0.6em);
+}
+.hero__aside {
+  margin-top: 18px;
+  padding-right: 330px; /* keeps it clear of the polaroid */
+  text-align: right;
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: var(--muted);
+  animation: fadeIn 1s 0.6s var(--ease) both;
 }
 .caret {
   display: inline-block;
@@ -237,7 +246,7 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
   align-items: end;
 }
 .hero__intro { animation: fadeUp 1s 0.5s var(--ease) both; }
-.hero__intro p { font-size: 1.2rem; color: var(--ink-2); max-width: 36ch; margin-bottom: 28px; }
+.hero__intro p { font-size: 1.2rem; color: var(--ink-2); max-width: 44ch; margin-bottom: 28px; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .mark {
   color: inherit;
@@ -351,6 +360,15 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
 .stat { padding: 24px 16px 0 0; }
 .stat + .stat { padding-left: 20px; border-left: 1px solid var(--line); }
 .stat strong { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 4vw, 3.8rem); letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px; }
+.stat--text strong { font-size: clamp(1.15rem, 1.7vw, 1.5rem); letter-spacing: -0.01em; padding-top: 0.6em; white-space: nowrap; }
+.stat > span { display: block; line-height: 1.45; }
+.pull cite {
+  display: block;
+  margin-top: 18px;
+  font-family: var(--sans); font-style: normal; font-weight: 600;
+  font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted);
+}
 .stat > span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 
 /* ---------- Services ---------- */
@@ -614,6 +632,7 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
   .hero__bottom { grid-template-columns: 1fr auto; gap: 32px; }
   .hero__intro { grid-column: 1 / -1; }
   .hero__photo-wrap { margin-top: 0; }
+  .hero__aside { padding-right: 0; }
   .about { grid-template-columns: 1fr; gap: 56px; }
   .svc__row { grid-template-columns: 56px 1fr 52px; gap: 8px 16px; padding: 28px 8px; }
   .svc__row p { grid-column: 2 / 4; grid-row: 2; }
@@ -635,9 +654,14 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
   .masthead { grid-template-columns: 1fr 1fr; }
   .masthead span:nth-child(2) { display: none; }
   .hero { min-height: auto; padding-top: 96px; }
-  .hero__title { font-size: 17.5vw; margin-top: 40px; }
-  .hero__line--indent { padding-left: 0; }
+  .hero__title { font-size: 11.5vw; margin-top: 40px; }
+  .hero__line > span { white-space: normal; }
   .hero__note { display: none; }
+  .hero__aside { text-align: left; }
+  .stats { grid-template-columns: 1fr; }
+  .stat, .stat + .stat { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  .stat strong { margin-bottom: 0; }
+  .stat--text strong { padding-top: 0; }
   .hero__intro p { font-size: 1.08rem; }
   .hero__bottom { padding-top: 40px; }
   .badge { width: 120px; height: 120px; }
@@ -645,9 +669,7 @@ body.has-cursor .cursor-dot, body.has-cursor .cursor-ring { display: block; }
   .polaroid { width: 190px; }
   .polaroid__img span { font-size: 6rem; }
   .polaroid figcaption { font-size: 1.1rem; }
-  .stats { grid-template-columns: 1fr 1fr 1fr; }
-  .stat + .stat { padding-left: 12px; }
-  .stat > span { font-size: 0.66rem; }
+  .stat > span { font-size: 0.68rem; text-align: right; }
   .svc__row { grid-template-columns: 1fr 48px; }
   .svc__num { grid-column: 1 / -1; }
   .svc__row h3 { grid-column: 1; grid-row: 2; }

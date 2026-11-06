@@ -3,7 +3,7 @@ import { Reveal, SectionHead } from './ui.jsx'
 
 export default function Process() {
   return (
-    <section className="section process">
+    <section id="process" className="section process">
       <div className="container">
         <SectionHead
           num="03"

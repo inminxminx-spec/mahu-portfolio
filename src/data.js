@@ -6,14 +6,19 @@
 export const profile = {
   name: 'Maheswari',
   role: 'Content Writer & Copywriter',
-  // the hero types these words one by one: "I write words that ___"
-  rotatingWords: ['sell', 'rank', 'stick', 'inspire'],
+  // the three items in the thin strip at the top of the home page
+  masthead: ['A study of self & symbolism', 'Vedic astrology · Tarot', 'India · By Maheswari'],
+  // big hero headline: the middle line is shown in coral italics
+  headline: ['I explore the patterns', 'that make you,', 'you.'],
+  headlineNote: 'Look a little closer.', // handwritten note next to the headline
+  headlineAside: 'A little curiosity goes a long way.',
   intro:
-    'I write blogs, website copy, SEO articles and social content that helps brands tell their story — and gets people to actually read it.',
-  highlight: 'helps brands tell their story', // this part of the intro gets a highlighter effect
+    'I explore Vedic astrology and tarot through thoughtful interpretations, meaningful conversations and a deep curiosity about what makes us who we are. A space to understand your patterns, question the familiar and see yourself from a different perspective.',
+  highlight: 'understand your patterns', // this part of the intro gets a highlighter effect
+  badge: 'OBSERVER · INTERPRETER · STORYTELLER ·', // the spinning circle badge
   location: 'India',
   since: '2022',
-  availability: 'Available for work',
+  availability: 'Available for consultations',
   email: 'hello@mahu.com',
   phone: '+91 00000 00000',
   photo: '', // e.g. '/mahu.jpg' (leave empty to show initials)
@@ -26,26 +31,28 @@ export const profile = {
 }
 
 export const about = {
+  // each item is one line of the About headline; the last line is shown in coral italics
+  headline: ['A curious mind,', 'drawn to', 'the patterns beneath.'],
   paragraphs: [
-    "Hi, I'm Maheswari — a content writer who believes every brand has a story worth telling. I turn ideas, research and rough notes into content people genuinely enjoy reading.",
-    'From long-form blogs and SEO articles to punchy website copy and social captions, I adapt my voice to fit your brand while keeping your goals at the centre of every single piece.',
+    "Hi, I'm Maheswari — a writer, storyteller and lifelong observer of the human experience. My curiosity lies in understanding who we are, why we think the way we do, and the patterns that shape our lives.",
+    "My journey through Philosophy, Psychology and eventually Vedic astrology led me to explore these questions through different lenses. Today, I bring together traditional astrological knowledge, intuitive interpretation and a writer's instinct for finding meaning in the details. Tarot has become another language I'm enjoying learning and exploring.",
   ],
-  quote: 'Good content doesn’t just inform. It makes people feel something — and then act on it.',
+  quote: 'If the Moon moves the tides, why shouldn’t I wonder about its influence on us?',
+  quoteAuthor: 'Maheswari',
+  // numbers like "12+" count up; words are shown as they are
   stats: [
-    { value: '3+', label: 'Years writing' },
-    { value: '500+', label: 'Articles live' },
-    { value: '60+', label: 'Happy clients' },
+    { value: '12+', label: 'Years with words' },
+    { value: 'Philosophy', label: 'Academic foundation' },
+    { value: 'Vedic · Tarot', label: 'Fields of exploration' },
   ],
   // shown in the scrolling band below the hero
   skills: [
-    'Blog Writing',
-    'SEO Content',
-    'Copywriting',
-    'Website Content',
-    'Social Media',
-    'Email Newsletters',
-    'Proofreading',
-    'Research',
+    'Vedic Astrology',
+    'Birth Chart Readings',
+    'Tarot',
+    'Dasha Analysis',
+    'Relationship Insights',
+    'Written Chart Interpretations',
   ],
 }
 

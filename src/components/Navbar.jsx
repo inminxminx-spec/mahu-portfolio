@@ -3,12 +3,13 @@ import { Link, useLocation } from 'react-router-dom'
 import { profile } from '../data.js'
 import { blogEnabled } from '../wordpress.js'
 
+// Astrology and Tarot point to the Services and Process sections until those get their own content
 const links = [
   { to: '/#about', label: 'About' },
-  { to: '/#services', label: 'Services' },
-  { to: '/#work', label: 'Work' },
-  ...(blogEnabled ? [{ to: '/blog', label: 'Blog' }] : []),
-  { to: '/#testimonials', label: 'Reviews' },
+  { to: '/#services', label: 'Astrology' },
+  { to: '/#process', label: 'Tarot' },
+  ...(blogEnabled ? [{ to: '/blog', label: 'Journal' }] : []),
+  { to: '/#work', label: 'Writing' },
   { to: '/#contact', label: 'Contact' },
 ]
 
