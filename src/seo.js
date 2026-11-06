@@ -30,6 +30,8 @@ export function useSeo({ title, description, path = '/', image } = {}) {
     setMeta('meta[property="og:description"]', 'content', desc)
     setMeta('meta[property="og:url"]', 'content', url)
     setMeta('meta[property="og:type"]', 'content', title ? 'article' : 'website')
+    // drop the previous article's image when moving to a page without one
     if (image) setMeta('meta[property="og:image"]', 'content', image)
+    else document.head.querySelector('meta[property="og:image"]')?.remove()
   }, [title, description, path, image])
 }

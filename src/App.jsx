@@ -37,15 +37,16 @@ function Home() {
 
 // Scrolls to the #section in the URL, or to the top when the page changes
 function ScrollManager() {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash, key } = useLocation()
 
+  // key changes on every click, so clicking the same menu link twice still scrolls
   useEffect(() => {
     if (hash) {
       const t = setTimeout(() => document.getElementById(hash.slice(1))?.scrollIntoView(), 60)
       return () => clearTimeout(t)
     }
     window.scrollTo(0, 0)
-  }, [pathname, hash])
+  }, [pathname, hash, key])
 
   return null
 }

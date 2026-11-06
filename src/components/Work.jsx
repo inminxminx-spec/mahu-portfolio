@@ -34,15 +34,15 @@ export default function Work() {
           </div>
         </div>
 
-        {/* key forces the cards to animate in again when the filter changes */}
+        {/* key forces the cards to animate in again when the filter changes;
+            only real http links open in a new tab, placeholder '#' links stay on the page */}
         <div className="work__grid" key={active}>
           {shown.map((s, i) => (
             <Reveal
               as="a"
               key={s.title}
               href={s.link}
-              target="_blank"
-              rel="noreferrer"
+              {...(/^https?:\/\//.test(s.link) ? { target: '_blank', rel: 'noreferrer' } : {})}
               delay={i * 90}
               className={`cover tone-${s.tone}`}
               data-cursor="Read"
