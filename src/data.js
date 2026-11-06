@@ -5,7 +5,7 @@
 
 export const profile = {
   name: 'Maheswari',
-  role: 'Content Writer & Copywriter',
+  role: 'Vedic Astrology & Tarot',
   // the three items in the thin strip at the top of the home page
   masthead: ['A study of self & symbolism', 'Vedic astrology · Tarot', 'India · By Maheswari'],
   // big hero headline: the middle line is shown in coral italics

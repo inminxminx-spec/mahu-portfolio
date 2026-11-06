@@ -113,7 +113,7 @@ export default function BlogPost() {
             <p className="author-box__label">Written by</p>
             <h3>{profile.name}</h3>
             <p>
-              {profile.role}. Need content like this for your brand? I'd love to help you tell your story.
+              {profile.role}. Curious about the patterns in your own chart? I'd love to explore them with you.
             </p>
             <Link to="/#contact" className="text-link">
               Work with me →
