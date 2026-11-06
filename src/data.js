@@ -19,7 +19,7 @@ export const profile = {
   location: 'India',
   since: '2022',
   availability: 'Available for consultations',
-  email: 'hello@mahu.com',
+  email: 'in.minxminx@gmail.com',
   phone: '+91 891 762 6754',
   photo: '', // e.g. '/mahu.jpg' (leave empty to show initials)
   resume: '', // e.g. '/resume.pdf'
